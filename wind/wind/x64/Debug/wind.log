@@ -1,0 +1,40 @@
+﻿生成启动时间为 2017/3/23 11:24:27。
+     1>项目“D:\Documents\Visual Studio 2015\Projects\wind\wind\wind.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt GetData.cpp GetFuture.cpp GetIndex.cpp main.cpp utils.cpp
+         utils.cpp
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\utils.cpp(35): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+         main.cpp
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+         GetIndex.cpp
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+         GetFuture.cpp
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\getfuture.cpp(53): warning C4101: “e”: 未引用的局部变量
+         GetData.cpp
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\tdbapistruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+     1>d:\documents\visual studio 2015\projects\wind\wind\getdata.cpp(180): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Documents\Visual Studio 2015\Projects\wind\x64\Debug\wind.exe" /INCREMENTAL /NOLOGO TDBAPI.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"D:\Documents\Visual Studio 2015\Projects\wind\x64\Debug\wind.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Documents\Visual Studio 2015\Projects\wind\x64\Debug\wind.lib" /MACHINE:X64 x64\Debug\GetData.obj
+         x64\Debug\GetFuture.obj
+         x64\Debug\GetIndex.obj
+         x64\Debug\main.obj
+         x64\Debug\utils.obj
+         wind.vcxproj -> D:\Documents\Visual Studio 2015\Projects\wind\x64\Debug\wind.exe
+     1>已完成生成项目“D:\Documents\Visual Studio 2015\Projects\wind\wind\wind.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:18.12

@@ -1,0 +1,8 @@
+[
+      {"name": "i", "ticksize": 0.5, "fee_rate_min": 0.00012, "fee_rate_max": 0.0003, "contract_multiplier": 100},
+      {"name": "j", "ticksize": 0.5, "fee_rate_min": 0.00012, "fee_rate_max": 0.00072,"contract_multiplier": 100},
+      {"name": "jm", "ticksize": 0.5, "fee_rate_min": 0.00012, "fee_rate_max": 0.00072,"contract_multiplier": 60},
+      {"name": "ru", "ticksize": 5, "fee_rate_min": 0.000045, "fee_rate_max": 0.00025,"contract_multiplier": 10},
+      {"name": "rb", "ticksize": 1, "fee_rate_min": 0.0001, "fee_rate_max": 0.0005,"contract_multiplier": 10},
+      {"name": "hc", "ticksize": 1, "fee_rate_min": 0.0001, "fee_rate_max": 0.0003,"contract_multiplier": 10}
+]

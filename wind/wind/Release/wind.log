@@ -1,0 +1,15 @@
+﻿  GetData.cpp
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+  GetFuture.cpp
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+  main.cpp
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(79): warning C4091: “typedef ”: 没有声明变量时忽略“REFILLFLAG”的左侧
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(92): warning C4091: “typedef ”: 没有声明变量时忽略“CYCTYPE”的左侧
+d:\documents\visual studio 2015\projects\wind\wind\TDBAPIStruct.h(99): warning C4091: “typedef ”: 没有声明变量时忽略“ORDERSIDE”的左侧
+  utils.cpp
+utils.cpp(29): warning C4018: “>=”: 有符号/无符号不匹配
+LINK : fatal error LNK1104: 无法打开文件“libboost_regex-vc140-mt-gd-1_62.lib”
