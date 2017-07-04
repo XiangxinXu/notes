@@ -22,7 +22,7 @@ def init_mpi_comm(x):
     comm_size = comm.Get_size()
 
 
-def iter_dataset(func, filepath, contractname, windowsize, num_slippage, ticksize, varify_window, enter_r_threshold):
+def iter_dataset(func, filepath, contractname, windowsize, num_slippage, ticksize, varify_window, enter_r_threshold, comment):
     """
     :param func: 计算哪种指标分布
     :param windowsize: 用于计算的窗口大小
@@ -31,18 +31,18 @@ def iter_dataset(func, filepath, contractname, windowsize, num_slippage, ticksiz
     :param enter_r_threshold: r的阈值，小于多少时产生入场信号。
     :return: 
     """
-    with h5py.File(filepath, 'r', driver='mpio', comm=comm) as f:
+    with h5py.File(filepath, 'r+', driver='mpio', comm=comm) as f:
         contractgrp = f.get(contractname, None)
         if contractgrp is None:
             return
         for grp in contractgrp.values():
             prob = grp.get('expo_dist_forecast_{}_{}'.format(windowsize, num_slippage))
             varify = grp.get('varification_{}_{}'.format(windowsize, num_slippage))
-            parse_data(func, f, prob, varify, windowsize, num_slippage, ticksize, varify_window, enter_r_threshold)
+            parse_data(func, f, prob, varify, windowsize, num_slippage, ticksize, varify_window, enter_r_threshold, comment)
             comm.bcast('for synchronization' if comm_rank == 0 else None, root=0)
 
 
-def parse_data(func, f_handle, prob, varify, windowsize, num_slippage, ticksize, varify_window, enter_r_threshold):
+def parse_data(func, f_handle, prob, varify, windowsize, num_slippage, ticksize, varify_window, enter_r_threshold, comment):
     """
     :param func: 计算哪种指标分布
     :param spread: h5py.DataSet
@@ -66,7 +66,7 @@ def parse_data(func, f_handle, prob, varify, windowsize, num_slippage, ticksize,
     res = func(exp_data, varify_data, varify_window, enter_r_threshold, ticksize)
 
     # 等一下，集合每一个res（字典），算总的res。
-    res = comm.gather(res, root=0)
+    res = comm.allgather(res)
     if comm_rank == 0:
         totalres = {}
         for item in res:
@@ -74,6 +74,14 @@ def parse_data(func, f_handle, prob, varify, windowsize, num_slippage, ticksize,
                 totalres[k] = totalres.setdefault(k, 0) + item[k]
 
         print totalres, '...windowsize:', windowsize, '...number of slippage:', num_slippage, 'enter r thred:', enter_r_threshold
+    name = comment + '_windowsize:' + str(windowsize) + '_num_slippage:' + str(num_slippage) + '_enter_r_threshold:' + str(enter_r_threshold)
+    totalres = comm.bcast(totalres if comm_rank == 0 else None, root=0)
+    sp = (2, len(totalres))
+    ds = grp.create_dataset(name, shape=sp, dtype=np.float32)
+    print 'xxx'
+    for i, key in enumerate(sorted(totalres)):
+        ds[0, i] = key
+        ds[1, i] = totalres[key]
 
 
 def distribution_1(expdata, varifydata, varify_window, enter_r_threshold, ticksize):
